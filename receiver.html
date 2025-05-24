@@ -1,0 +1,21 @@
+<!-- receiver.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Receiver Page</title>
+</head>
+<body>
+  <h1>Received Data</h1>
+  <p><strong>Email:</strong> <span id="email"></span></p>
+  <p><strong>Password:</strong> <span id="password"></span></p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const email = urlParams.get('email');
+    const password = urlParams.get('password');
+
+    document.getElementById('email').textContent = email || '(none)';
+    document.getElementById('password').textContent = password || '(none)';
+  </script>
+</body>
+</html>
